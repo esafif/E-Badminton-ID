@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="E_Badminton_ID.Forehandservice"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:E_Badminton_ID"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ToolTipForegroundThemeBrush}">
+        <RelativePanel>
+            <ListBox Name="ls" SelectionChanged="ls_SelectionChanged">
+                <ListBoxItem Name="backtotraining">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="back" FontFamily="Segoe MDL2 Assets" Margin="3" Text="&#xE938;"/>
+                        <TextBlock Text="Back To Training " />
+                    </StackPanel>
+                </ListBoxItem>
+            </ListBox>
+
+
+            <MediaElement x:Name="mymedia" 
+                      MaxWidth="1600"
+                      MaxHeight="600"
+                      RelativePanel.AlignHorizontalCenterWithPanel="True"
+                      HorizontalAlignment="Center"
+                      AreTransportControlsEnabled="True"
+                      RelativePanel.Below="ls"
+                      AutoPlay="False" 
+             />
+        </RelativePanel>
+    </Grid>
+</Page>

@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="E_Badminton_ID.Peraturan"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:E_Badminton_ID"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Normal">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="900"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                </VisualState>
+
+                <VisualState x:Name="Mobile">
+                    <VisualState.Setters>
+                        <Setter Value="" Target="text.(RelativePanel.AlignTopWith)" />
+                        <Setter Value="image" Target="text.(RelativePanel.Below)" />
+                        <Setter Value="" Target="text.(RelativePanel.RightOf)" />
+                        <Setter Value="0,10,0,10" Target="text.Margin" />
+                    </VisualState.Setters>
+
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <RelativePanel Padding="10,10,10,10">
+            <TextBlock Name="Header" Text="Peraturan Badminton" TextWrapping="Wrap" FontWeight="Bold"/>
+            <Image Name="image" MaxWidth="500" RelativePanel.Below="Header" Source="Assets/Badminton Rules.png" Margin="5,5,5,5"/>
+            <TextBlock Margin="10,0,10,0" TextWrapping="Wrap" TextAlignment="Justify" RelativePanel.Below="image" Name="text">
+                   Poin dalam bulu tangkis dihitung oleh juri yang mengawasi jalannya pertandingan di bagian tengah lapangan dan dibantu oleh asisten wasit yang berada dibagian belakang pemain. Perhitungan point dilakukan dengan cara menghitung shuttlecock yang masuk kedalam daerah lawan / ketika lawan melakukan kesalahan sehingga shuttlecock keluar dari lapangan atau saat pemain lain gagal mengembalikan shuttlecock karena jatuh di daerah pertahanan sendiri. Dalam pengertian bulu tangkis yang dikeluarkan oleh BWF, olahraga ini dibagi menjadi 5 partai, adapun pembagiannya adalah sebagai berikut :
+                    <LineBreak />
+                    <LineBreak />
+                    <LineBreak />
+                    1.  Tunggal Putra
+                    <LineBreak />
+                    <LineBreak />
+                    Partai tunggal putra dalam olahraga bulu tangkis dimainkan oleh 2 pemain yang saling berlawanan. Pada partai ini dipertandingkan antara satu pemain putra dengan satu lagi pemain putra untuk memperebutkan juara. Tunggal putra yang telah mengharumkan nama Indonesia di antaranya Taufik Hidayat, Heryanto Arbi, Ardy Wiranata, Liem Swie King, Rudy Hartono, Tan Joe Hok.
+                    <LineBreak />
+                    <LineBreak />
+                    2. Tunggal Putri
+                    <LineBreak />
+                    Tunggal putri adalah pemainan bulu tangkis yang dilakukan oleh 2 pemain yang saling berlawanan. Berbeda dengan tunggal putra, tunggal putri adalah partai yang dimainkan oleh satu pemain putri melawan satu pemain putri. Tunggal putri telah mencatatkan nama Susi Susanti sebagai tunggal putri yang melegenda.
+                    <LineBreak />
+                    <LineBreak />
+                    3. Ganda Putra
+                    <LineBreak />
+                    Berbeda dengan partai tunggal, partai ganda dimainkan oleh dua pasang pemain yang saling berlawanan. Hal ini berarti setiap regu memainkan dua orang untuk melawan 2 pemain lawan di tim yang berbeda. Sesuai namanya ganda putra berarti 2 pasang pemain dalam tim tersebut dimainkan oleh 2 pemain laki-laki. Saat ini kita memiliki Hendra Setyawan Dan Mohammad Ahsan yang masuk di ranking 2 dunia versi BWF yang mewakili Indonesia di partai ganda putra.
+                    <LineBreak />
+                    <LineBreak />
+                    4. Ganda Putri
+                    <LineBreak />
+                    Berbeda dengan ganda putra, pada ganda putri dua pemain dalam satu tim haruslah wanita sehingga akan ada 4 wanita yang dibagi menjadi 2 pasang tim yang akan saling memperebutkan kemenangan. Saat ini kita juga mempunyai wakil ganda putri yang masuk sepuluh besar ranking BWF atas nama Nitya Krishinda Maheswari dan Greysia Polii yang menduduki ranking 5 dunia.
+                    <LineBreak />
+                    <LineBreak />
+                    5. Ganda Campuran
+                    <LineBreak />
+                       Pada partai ganda campuran terdapat 2 tim yang akan saling bertanding, dimana setiap regu / tim harus memainkan 1 pemain laki-laki dan 1 pemain wanita. Saat ini Indonesia memiliki 2 pasang ganda campuran yang masuk 10 besar ranking dunia versi BWF, yaitu atas nama Tantowi Ahmad dan Liliyana Natsir (ranking 2 dunia) serta Praven Jordan dan Debby Susanto (ranking 9 dunia).
+                    <LineBreak />
+                    <LineBreak />
+            </TextBlock>
+        </RelativePanel>
+    </Grid>
+</Page>
